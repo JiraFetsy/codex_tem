@@ -1,4 +1,4 @@
-# Croquis du projet (Laravel + MySQL)
+# Croquis du projet Codex_tily (Laravel + MySQL)
 
 ## Objectif
 Mettre en place un projet Laravel utilisant MySQL comme base de données, avec une structure claire des dossiers, des conventions de configuration et un plan de démarrage.
@@ -39,7 +39,7 @@ Mettre en place un projet Laravel utilisant MySQL comme base de données, avec u
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=codex_tem
+DB_DATABASE=codex_tily
 DB_USERNAME=laravel
 DB_PASSWORD=secret
 ```
