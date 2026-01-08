@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top, #f2f6ff, #dbe6ff 45%, #c5d2ff 100%);
+        }
+
+        .page {
+            width: min(1100px, 92vw);
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 28px;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+            padding: 48px 56px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1e1b4b;
+        }
+
+        .logo span {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.35);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #312e81;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(99, 102, 241, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            margin: 0 0 16px;
+            color: #111827;
+        }
+
+        .hero-text p {
+            margin: 0 0 24px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-actions a {
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 14px;
+            font-weight: 600;
+            border: 1px solid transparent;
+        }
+
+        .primary {
+            background: #111827;
+            color: white;
+        }
+
+        .secondary {
+            border-color: #c7d2fe;
+            color: #1e1b4b;
+            background: #eef2ff;
+        }
+
+        .menu-card {
+            padding: 28px;
+            border-radius: 20px;
+            background: #fff;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .menu-card h2 {
+            margin: 0 0 16px;
+            font-size: 1.4rem;
+            color: #1f2937;
+        }
+
+        .menu-card ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .menu-card li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: #f8fafc;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .menu-card li span {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: rgba(34, 211, 238, 0.2);
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="logo">
+                <span>LC</span>
+                Laravel Club
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Bienvenue sur votre première page Laravel</h1>
+                <p>
+                    Un menu élégant, une mise en page lumineuse et un point de départ
+                    idéal pour personnaliser votre application.
+                </p>
+                <div class="hero-actions">
+                    <a class="primary" href="#">Découvrir</a>
+                    <a class="secondary" href="#">Voir les offres</a>
+                </div>
+            </div>
+            <div class="menu-card">
+                <h2>Menu rapide</h2>
+                <ul>
+                    <li><span>✨</span> Dernières nouveautés</li>
+                    <li><span>🚀</span> Lancer un projet</li>
+                    <li><span>📊</span> Tableau de bord</li>
+                    <li><span>💬</span> Support &amp; FAQ</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
