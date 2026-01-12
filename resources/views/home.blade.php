@@ -14,11 +14,44 @@
                 Laravel Club
             </div>
             <nav>
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">Menu 1) Accueil</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{ route('historique-scoutisme') }}">Historique et but du scoutisme</a></li>
+                            <li><a href="#">Historique TEM</a></li>
+                            <li><a href="#">Historique Analamanga</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu 2) Cartographie</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Délimitation + fizarana par faritra</a></li>
+                            <li><a href="#">Lisitry ny fivondronana</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu 3) Ekipa</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Organigramme faritany (+contact tsirairay)</a></li>
+                            <li><a href="#">Lisitra taripanofanana a jour</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu 4) FAFI</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Lisitra cible</a></li>
+                            <li><a href="#">Lisitra mp nanao fangatahana andraikitra</a></li>
+                            <li><a href="#">Lisitra beazina nandoa fafi</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu 5) Angom-boky</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Bokim-panabeazana</a></li>
+                            <li><a href="#">Boky fiofanana</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
