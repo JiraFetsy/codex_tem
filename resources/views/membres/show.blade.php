@@ -24,6 +24,9 @@
             <div class="hero-text">
                 <h1>Fiche de {{ $membre->nom }} {{ $membre->prenom }}</h1>
                 <p>Retrouvez les informations enregistrées pour ce membre.</p>
+                @if (session('status'))
+                    <p class="status">{{ session('status') }}</p>
+                @endif
             </div>
             <div class="menu-card">
                 <h2>Informations</h2>
@@ -33,6 +36,33 @@
                     <li><span>📍</span> Adresse : {{ $membre->adresse }}</li>
                     <li><span>📞</span> Numéro : {{ $membre->numero }}</li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-card">
+                <h2>Modifier les informations</h2>
+                <form method="POST" action="{{ route('membres.update', $membre->id) }}">
+                    @csrf
+                    @method('PATCH')
+                    <div class="field">
+                        <label for="nom">Nom</label>
+                        <input id="nom" name="nom" type="text" value="{{ old('nom', $membre->nom) }}" required>
+                    </div>
+                    <div class="field">
+                        <label for="prenom">Prénom</label>
+                        <input id="prenom" name="prenom" type="text" value="{{ old('prenom', $membre->prenom) }}" required>
+                    </div>
+                    <div class="field">
+                        <label for="adresse">Adresse</label>
+                        <input id="adresse" name="adresse" type="text" value="{{ old('adresse', $membre->adresse) }}" required>
+                    </div>
+                    <div class="field">
+                        <label for="numero">Numéro</label>
+                        <input id="numero" name="numero" type="text" value="{{ old('numero', $membre->numero) }}" required>
+                    </div>
+                    <button class="primary" type="submit">Modifier</button>
+                </form>
             </div>
         </section>
     </div>

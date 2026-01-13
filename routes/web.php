@@ -68,3 +68,27 @@ Route::get('/membres/{id}', function (int $id) {
 
     return view('membres.show', ['membre' => $membre]);
 })->name('membres.show');
+
+Route::patch('/membres/{id}', function (Request $request, int $id) {
+    $validated = $request->validate([
+        'nom' => ['required', 'string', 'max:255'],
+        'prenom' => ['required', 'string', 'max:255'],
+        'adresse' => ['required', 'string', 'max:255'],
+        'numero' => ['required', 'string', 'max:50'],
+    ]);
+
+    $updated = DB::table('membres')
+        ->where('id', $id)
+        ->update([
+            'nom' => $validated['nom'],
+            'prenom' => $validated['prenom'],
+            'adresse' => $validated['adresse'],
+            'numero' => $validated['numero'],
+        ]);
+
+    if (!$updated) {
+        return back()->with('status', 'Aucune modification effectuée.');
+    }
+
+    return back()->with('status', 'Membre mis à jour.');
+})->name('membres.update');
