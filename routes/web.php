@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/historique-scoutisme', function () {
+    return view('historique');
+})->name('historique-scoutisme');

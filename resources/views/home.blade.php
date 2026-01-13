@@ -10,35 +10,35 @@
     <div class="page">
         <header>
             <div class="logo">
-                <span>SAAHI</span>
-                Tily Analamanga Andrefana
+                <span>LC</span>
+                Laravel Club
             </div>
             <nav>
                 <ul class="main-menu">
                     <li>
-                        <a href="#">Accueil</a>
+                        <a href="#">Menu 1) Accueil</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Historique et but du scoutisme</a></li>
+                            <li><a href="{{ route('historique-scoutisme') }}">Historique et but du scoutisme</a></li>
                             <li><a href="#">Historique TEM</a></li>
                             <li><a href="#">Historique Analamanga</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Cartographie</a>
+                        <a href="#">Menu 2) Cartographie</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Délimitation + Faritra</a></li>
-                            <li><a href="#">Lisitry ny Fivondronana</a></li>
+                            <li><a href="#">Délimitation + fizarana par faritra</a></li>
+                            <li><a href="#">Lisitry ny fivondronana</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Equipe</a>
+                        <a href="#">Menu 3) Ekipa</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Organigramme faritany et contact</a></li>
-                            <li><a href="#">Lisitra taripanofanana </a></li>
+                            <li><a href="#">Organigramme faritany (+contact tsirairay)</a></li>
+                            <li><a href="#">Lisitra taripanofanana a jour</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">FAFI</a>
+                        <a href="#">Menu 4) FAFI</a>
                         <ul class="sub-menu">
                             <li><a href="#">Lisitra cible</a></li>
                             <li><a href="#">Lisitra mp nanao fangatahana andraikitra</a></li>
@@ -46,7 +46,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Angom-boky</a>
+                        <a href="#">Menu 5) Angom-boky</a>
                         <ul class="sub-menu">
                             <li><a href="#">Bokim-panabeazana</a></li>
                             <li><a href="#">Boky fiofanana</a></li>
@@ -58,13 +58,13 @@
 
         <section class="hero">
             <div class="hero-text">
-                <h1>Bienvenue sur le site d'Analamaga Andrefana</h1>
+                <h1>Bienvenue sur votre première page Laravel</h1>
                 <p>
                     Un menu élégant, une mise en page lumineuse et un point de départ
                     idéal pour personnaliser votre application.
                 </p>
                 <div class="hero-actions">
-                    <a class="primary" href="#">Botique</a>
+                    <a class="primary" href="#">Découvrir</a>
                     <a class="secondary" href="#">Voir les offres</a>
                 </div>
             </div>
