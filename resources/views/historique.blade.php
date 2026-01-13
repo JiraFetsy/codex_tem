@@ -52,7 +52,7 @@
                     <label for="search">Tapez un nom, prénom, adresse ou numéro</label>
                     <input id="search" name="search" type="text" onkeyup="searchMembres(this.value)" autocomplete="off">
                 </div>
-                <div id="search-results" class="search-results" aria-live="polite"></div>
+                <div id="search-results" class="search-results" data-show-url="{{ url('/membres') }}" aria-live="polite"></div>
             </div>
         </section>
 
@@ -85,6 +85,7 @@
     <script>
         let searchTimeout;
         const searchResults = document.getElementById('search-results');
+        const showBaseUrl = searchResults.dataset.showUrl;
 
         function renderResults(results) {
             if (!results.length) {
@@ -96,6 +97,9 @@
                 <div class="search-item">
                     <div class="search-name">${membre.nom} ${membre.prenom}</div>
                     <div class="search-meta">${membre.adresse} · ${membre.numero}</div>
+                    <a class="search-action" href="${showBaseUrl}/${membre.id}" aria-label="Voir la fiche de ${membre.nom} ${membre.prenom}">
+                        <span aria-hidden="true">👁️</span> Voir
+                    </a>
                 </div>
             `);
 

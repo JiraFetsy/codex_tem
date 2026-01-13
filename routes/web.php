@@ -54,7 +54,17 @@ Route::get('/membres/search', function (Request $request) {
         ->orWhere('adresse', 'like', '%' . $query . '%')
         ->orWhere('numero', 'like', '%' . $query . '%')
         ->limit(10)
-        ->get(['nom', 'prenom', 'adresse', 'numero']);
+        ->get(['id', 'nom', 'prenom', 'adresse', 'numero']);
 
     return response()->json($results);
 })->name('membres.search');
+
+Route::get('/membres/{id}', function (int $id) {
+    $membre = DB::table('membres')->where('id', $id)->first();
+
+    if (!$membre) {
+        abort(404);
+    }
+
+    return view('membres.show', ['membre' => $membre]);
+})->name('membres.show');
