@@ -311,30 +311,3 @@ header {
     margin: 0;
     color: #64748b;
 }
-
-.table-wrapper {
-    overflow-x: auto;
-}
-
-.members-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 12px;
-}
-
-.members-table th,
-.members-table td {
-    text-align: left;
-    padding: 12px 14px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    color: #1f2937;
-}
-
-.members-table th {
-    font-weight: 700;
-    background: rgba(99, 102, 241, 0.08);
-}
-
-.members-table tbody tr:hover {
-    background: rgba(148, 163, 184, 0.08);
-}
