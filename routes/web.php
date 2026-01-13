@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/historique-scoutisme', function () {
-    return view('historique');
-})->name('historique-scoutisme');
+Route::get('/mp', function () {
+    return view('mp');
+})->name('mp');
 
 Route::post('/membres', function (Request $request) {
     $validated = $request->validate([
@@ -38,7 +38,7 @@ Route::post('/membres', function (Request $request) {
         'numero' => $validated['numero'],
     ]);
 
-    return back()->with('status', 'Membre enregistré.');
+    return back()->with('status', 'Mpiandraikitra enregistré.');
 })->name('membres.store');
 
 Route::get('/membres/search', function (Request $request) {

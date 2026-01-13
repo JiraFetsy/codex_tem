@@ -10,43 +10,43 @@
     <div class="page">
         <header>
             <div class="logo">
-                <span>LC</span>
-                Laravel Club
+                <span>SAHI</span>
+                ANALAMANG ANDREFANA
             </div>
             <nav>
                 <ul class="main-menu">
                     <li>
-                        <a href="#">Menu 1) Accueil</a>
+                        <a href="#">Accueil</a>
                         <ul class="sub-menu">
-                            <li><a href="{{ route('historique-scoutisme') }}">Historique et but du scoutisme</a></li>
+                            <li><a href="#">Historique et but du scoutisme</a></li>
                             <li><a href="#">Historique TEM</a></li>
                             <li><a href="#">Historique Analamanga</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Menu 2) Cartographie</a>
+                        <a href="#">Cartographie</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Délimitation + fizarana par faritra</a></li>
-                            <li><a href="#">Lisitry ny fivondronana</a></li>
+                            <li><a href="#">Délimitation et Fizarana par faritra</a></li>
+                            <li><a href="#">Lisitry ny Fivondronana</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Menu 3) Ekipa</a>
+                        <a href="#">Ekipa</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Organigramme faritany (+contact tsirairay)</a></li>
+                            <li><a href="#">Organigramme faritany et contact)</a></li>
                             <li><a href="#">Lisitra taripanofanana a jour</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Menu 4) FAFI</a>
+                        <a href="#">FAFI</a>
                         <ul class="sub-menu">
                             <li><a href="#">Lisitra cible</a></li>
-                            <li><a href="#">Lisitra mp nanao fangatahana andraikitra</a></li>
-                            <li><a href="#">Lisitra beazina nandoa fafi</a></li>
+                            <li><a href="{{ route('mp') }}">Lisitra mp nanao fangatahana andraikitra</a></li>
+                            <li><a href="#">Lisitra beazina nandoa FaFi</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Menu 5) Angom-boky</a>
+                        <a href="#">Angom-boky</a>
                         <ul class="sub-menu">
                             <li><a href="#">Bokim-panabeazana</a></li>
                             <li><a href="#">Boky fiofanana</a></li>
