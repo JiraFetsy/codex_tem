@@ -40,3 +40,21 @@ Route::post('/membres', function (Request $request) {
 
     return back()->with('status', 'Membre enregistré.');
 })->name('membres.store');
+
+Route::get('/membres/search', function (Request $request) {
+    $query = (string) $request->query('q', '');
+
+    if ($query === '') {
+        return response()->json([]);
+    }
+
+    $results = DB::table('membres')
+        ->where('nom', 'like', '%' . $query . '%')
+        ->orWhere('prenom', 'like', '%' . $query . '%')
+        ->orWhere('adresse', 'like', '%' . $query . '%')
+        ->orWhere('numero', 'like', '%' . $query . '%')
+        ->limit(10)
+        ->get(['nom', 'prenom', 'adresse', 'numero']);
+
+    return response()->json($results);
+})->name('membres.search');

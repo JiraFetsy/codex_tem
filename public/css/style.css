@@ -263,3 +263,32 @@ header {
     border-color: #6366f1;
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
+
+.search-results {
+    margin-top: 16px;
+    display: grid;
+    gap: 12px;
+}
+
+.search-item {
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.search-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.search-meta {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.search-empty {
+    margin: 0;
+    color: #64748b;
+}

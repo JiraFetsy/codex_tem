@@ -47,6 +47,17 @@
 
         <section class="form-section">
             <div class="form-card">
+                <h2>Rechercher un membre</h2>
+                <div class="field">
+                    <label for="search">Tapez un nom, prénom, adresse ou numéro</label>
+                    <input id="search" name="search" type="text" onkeyup="searchMembres(this.value)" autocomplete="off">
+                </div>
+                <div id="search-results" class="search-results" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-card">
                 <h2>Ajouter un membre</h2>
                 <form method="POST" action="{{ route('membres.store') }}">
                     @csrf
@@ -71,5 +82,44 @@
             </div>
         </section>
     </div>
+    <script>
+        let searchTimeout;
+        const searchResults = document.getElementById('search-results');
+
+        function renderResults(results) {
+            if (!results.length) {
+                searchResults.innerHTML = '<p class="search-empty">Aucun membre trouvé.</p>';
+                return;
+            }
+
+            const items = results.map((membre) => `
+                <div class="search-item">
+                    <div class="search-name">${membre.nom} ${membre.prenom}</div>
+                    <div class="search-meta">${membre.adresse} · ${membre.numero}</div>
+                </div>
+            `);
+
+            searchResults.innerHTML = items.join('');
+        }
+
+        function searchMembres(value) {
+            clearTimeout(searchTimeout);
+            const query = value.trim();
+
+            if (!query) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            searchTimeout = setTimeout(() => {
+                fetch(`{{ route('membres.search') }}?q=${encodeURIComponent(query)}`)
+                    .then((response) => response.json())
+                    .then((data) => renderResults(data))
+                    .catch(() => {
+                        searchResults.innerHTML = '<p class="search-empty">Erreur de recherche.</p>';
+                    });
+            }, 200);
+        }
+    </script>
 </body>
 </html>
