@@ -41,6 +41,12 @@ Route::post('/membres', function (Request $request) {
     return back()->with('status', 'Membre enregistré.');
 })->name('membres.store');
 
+Route::get('/membres', function () {
+    $membres = DB::table('membres')->orderBy('nom')->get();
+
+    return view('membres.index', ['membres' => $membres]);
+})->name('membres.index');
+
 Route::get('/membres/search', function (Request $request) {
     $query = (string) $request->query('q', '');
 

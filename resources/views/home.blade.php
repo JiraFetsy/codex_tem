@@ -40,7 +40,7 @@
                     <li>
                         <a href="#">Menu 4) FAFI</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Lisitra cible</a></li>
+                            <li><a href="{{ route('membres.index') }}">Lisitra cible</a></li>
                             <li><a href="#">Lisitra mp nanao fangatahana andraikitra</a></li>
                             <li><a href="#">Lisitra beazina nandoa fafi</a></li>
                         </ul>
