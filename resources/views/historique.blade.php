@@ -27,6 +27,9 @@
                     Cette page est prête à accueillir le contenu sur l'historique du scoutisme
                     et ses objectifs. Ajoutez vos textes, images et ressources ici.
                 </p>
+                @if (session('status'))
+                    <p class="status">{{ session('status') }}</p>
+                @endif
                 <div class="hero-actions">
                     <a class="primary" href="{{ url('/') }}">Revenir à l'accueil</a>
                     <a class="secondary" href="#">Ajouter du contenu</a>
@@ -39,6 +42,32 @@
                     <li><span>🎯</span> Valeurs &amp; mission</li>
                     <li><span>🗺️</span> Références locales</li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-card">
+                <h2>Ajouter un membre</h2>
+                <form method="POST" action="{{ route('membres.store') }}">
+                    @csrf
+                    <div class="field">
+                        <label for="nom">Nom</label>
+                        <input id="nom" name="nom" type="text" value="{{ old('nom') }}" required>
+                    </div>
+                    <div class="field">
+                        <label for="prenom">Prénom</label>
+                        <input id="prenom" name="prenom" type="text" value="{{ old('prenom') }}" required>
+                    </div>
+                    <div class="field">
+                        <label for="adresse">Adresse</label>
+                        <input id="adresse" name="adresse" type="text" value="{{ old('adresse') }}" required>
+                    </div>
+                    <div class="field">
+                        <label for="numero">Numéro</label>
+                        <input id="numero" name="numero" type="text" value="{{ old('numero') }}" required>
+                    </div>
+                    <button class="primary" type="submit">Enregistrer</button>
+                </form>
             </div>
         </section>
     </div>
