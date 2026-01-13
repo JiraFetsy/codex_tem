@@ -40,9 +40,15 @@
                     <li>
                         <a href="#">FAFI</a>
                         <ul class="sub-menu">
+<<<<<<< HEAD
                             <li><a href="#">Lisitra cible</a></li>
                             <li><a href="{{ route('mp') }}">Lisitra mp nanao fangatahana andraikitra</a></li>
                             <li><a href="#">Lisitra beazina nandoa FaFi</a></li>
+=======
+                            <li><a href="{{ route('membres.index') }}">Lisitra cible</a></li>
+                            <li><a href="#">Lisitra mp nanao fangatahana andraikitra</a></li>
+                            <li><a href="#">Lisitra beazina nandoa fafi</a></li>
+>>>>>>> 8886eaf40884288094cbf0a1e3bb44e2c70f6002
                         </ul>
                     </li>
                     <li>
